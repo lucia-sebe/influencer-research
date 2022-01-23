@@ -1,19 +1,40 @@
-import React from 'react';
-import Logo from '../images/logolu.png';
+import React, { useState } from 'react'
+import Logo from '../images/logolu.png'
+import Intereses from '../components/intereses'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { useAuth0 } from "@auth0/auth0-react";
 
+import '../styles/home.css'
 function Home() {
+
+    const [menu, setMenu] = useState(false);
+    const showMenu = () => setMenu(!menu);
+    const { user, isAuthenticated } = useAuth0();
+
     return (
-        <div className="w-screen h-screen">
-            <header className="h-20	bg-gray-300	flex">
-                <div className="w-3/4 h-full">
-                    <h1 className="text-red-600 font text-xl mt-5 ml-3 ">Name User</h1>
+        isAuthenticated && (
+            <div className="w-screen h-screen bg-gray-200">
+                <header className="h-20 flex ">
+                    <div className="w-1/2 flex">
+                        <FontAwesomeIcon icon={faBars} onClick={showMenu} size="2x" className="color m-4" />
+                        {/* <img src={user.picture} alt={user.name} className="h-2/5 mr-16 rounded-3xl" /> */}
+                        <h1 className="color font text-xl mt-5 ml-3 ">{ user.name }</h1>
+                    </div>
+
+                    <div className="w-1/2 flex justify-end">
+                        <h1 className="color font-bold text-xl mt-5 ">INFLUENCER RESEARCH</h1>
+                        <img src={Logo} alt="logo of influencer research" className="w-12 h-16 m-1 mr-6"></img>
+                    </div>
+                </header>
+
+                <div className={menu ? 'menu active' : 'menu'} ></div>
+
+                <div>
+                    <Intereses />
                 </div>
-                <div className="w-1/4 h-full flex">
-                    <h1 className="text-red-600 font-bold text-xl mt-5 ">INFLUENCER RESEARCH</h1>
-                    <img src={Logo} className="w-12 h-16 m-1 mr-6"></img>
-                </div>
-            </header>
-        </div>
+            </div>
+        )
     )
 }
 
