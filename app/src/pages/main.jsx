@@ -1,14 +1,17 @@
 import React from 'react';
 import Logo from '../images/logolu.png';
+import { LoginButton } from '../auth0/login';
+import '../styles/main.css';
 
 function Main() {
     return (
-        <main className="w-screen h-screen bg-gray-300">
-            <div className="w-full h-3/4  ">
-                <img src={Logo} className="w-1/6 h-3/6 p-4 float-right"></img>
+        <main className="w-screen h-screen bg-gray-200"> 
+            <div>
+                <img src={Logo} alt="logo from influencer research" className="logo w-1/6 pt-16"></img>
+                <h1 className="color text-center font-bold text-3xl mt-5 ">INFLUENCER RESEARCH</h1>
             </div>
-            <div className="w-full h-1/4 bg-red-700">
-                <h1 classNeme="text-3xl ">Influencer Research</h1>
+            <div className="text-center mt-16">
+                <button className="loginButton allButton color border rounded-full border-solid mt-4 p-2 pr-4 pl-4 text-xl"> <LoginButton/> </button>
             </div>
         </main>
     )
