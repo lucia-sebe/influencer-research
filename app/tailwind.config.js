@@ -4,9 +4,9 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'usm': {max:'420px'},
+      'usm': {min:'420px'},
 
-      'sm': {min:'420px'},
+      'sm': {min:'500px'},
       // => @media (min-width: 640px) { ... }
 
       'md': {min: '768px'},

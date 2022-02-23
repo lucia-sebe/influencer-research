@@ -2,5 +2,6 @@
 
 *{
     font-family: 'Source Sans Pro', sans-serif;
-    color: rgb(0, 0, 0);
+    margin: 0;
+    cursor: default;
 }
