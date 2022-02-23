@@ -18,7 +18,6 @@ function Home() {
                 <header className="h-20 flex ">
                     <div className="w-1/2 flex">
                         <FontAwesomeIcon icon={faBars} onClick={showMenu} size="2x" className="color m-4" />
-                        {/* <img src={user.picture} alt={user.name} className="h-2/5 mr-16 rounded-3xl" /> */}
                         <h1 className="color font text-xl mt-5 ml-3 ">{ user.name }</h1>
                     </div>
 
