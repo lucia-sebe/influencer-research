@@ -36,7 +36,7 @@ const Maps = () => {
             <div className="h-5/6 flex">
                 <div className="w-4/6 h-6/6">
                     <GoogleMap
-                        bootstrapURLKeys={{ key: 'AIzaSyCGdcEd_dC-I10mNsrWkkJ3X7_4jAbCUXs' }}
+                        bootstrapURLKeys={{ key: process.env.REACT_APP_MAPS_API_KEY }}
                         center={props.center}
                         zoom={props.zoom}
                         onClick={addMarker}

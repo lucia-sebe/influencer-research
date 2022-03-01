@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const Recomendaciones = ({ location }) => {
-    const API_KEY = 'AIzaSyDEc047qDtqEJ65W0Tge6vs34A6jnubkfU';
+    const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
     const BASE_URL = 'https://www.googleapis.com/youtube/v3/';
     const maxResults = 4;
     const order = "viewCount";
@@ -15,6 +15,8 @@ const Recomendaciones = ({ location }) => {
         setQueryLocation(location[0]?.lat + "%2C%20" + location[0]?.lng);
         traerVideos();
     }, [location]);
+    
+    console.log("key ", API_KEY)
 
     const traerVideos = () => {
         fetch(finalURL)
