@@ -32,11 +32,20 @@
     box-shadow: 0.3rem 0.3rem 0.3rem 0rem #ff42426c; 
     cursor: pointer;
 }
-
-.interes.button:hover{
-    background:#c2f3c8 ;
+.interes.seleccionado{
+    margin: 0.75rem;
+    padding: 2rem  5rem 2rem 5rem;
+    font-size: 24px;
     color: #ea4335;
+    background-color: #c2f3c8;
+    border-radius: 15px;
+    box-shadow: 0.3rem 0.3rem 0.3rem 0rem #0cf8272c; 
 }
+
+.interes.button:active {  
+    box-shadow: 0.3rem 0.5rem 0.3rem 0rem #ff42426c;
+    transform: translateY(4px);
+} 
 
 .boxNextButton{
     display: flex;
@@ -46,19 +55,7 @@
 .nextButton{
     font-size: 24px;
     color: #ea4335;
-    background-color: #e5e7eb;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0rem 0rem 0.3rem 0.3rem #ff424293;
-}
-
-.allButton:active {  
-    /* box-shadow: 0rem 0.3rem 0rem 0.1rem #ff424293; */
-    transform: translateY(4px);
-}
-
-
-.interes.button:active {  
-    box-shadow: 0.3rem 0.5rem 0.3rem 0rem #ff42426c;
+    border-radius: 8em;
+    border-color: #ea4335;
     transform: translateY(4px);
 }

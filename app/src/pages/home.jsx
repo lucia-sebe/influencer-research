@@ -34,13 +34,13 @@ function Home() {
                     <p className="ml-4 mt-8 hover:text-gray-900">Edit profile</p>
                     <p className="ml-4 mt-4 hover:text-gray-900">Intereses</p>
                     <p className="ml-4 mt-4 hover:text-gray-900">Help</p>
-                    <div className="ml-4 mt-4 hover:text-gray-900"><LogoutButton/></div>
+                    <div className="ml-4 mt-4 hover:text-gray-900"><LogoutButton /></div>
                 </div>
 
-                <Intereses/>
+                <Intereses />
 
                 <div className="boxNextButton">
-                    <Link to='/mapa' className="nextButton allButton border rounded-full m-12 p-2 pr-8 pl-8 md:text-xl usm:text-md">NEXT</Link>
+                    <Link to='/mapa' className="nextButton border rounded-full m-12 p-2 pr-8 pl-8 md:text-xl usm:text-md">NEXT</Link>
                 </div>
             </div>
         )
